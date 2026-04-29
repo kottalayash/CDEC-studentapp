@@ -5,4 +5,6 @@ WORKDIR /app
 
 RUN mvn clean package 
 EXPOSE 8080
+WORKDIR /app/target
+
 CMD ["java", "-jar", "target/*.jar"]
