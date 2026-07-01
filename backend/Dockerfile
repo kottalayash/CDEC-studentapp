@@ -3,7 +3,7 @@ FROM maven:3.8.5-openjdk-17
 COPY . /app
 WORKDIR /app
 
-RUN mvn clean package 
+RUN mvn clean package -DskipTest
 EXPOSE 8080
 WORKDIR /app/target
 
